@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.iegs.services.person.watcher.controller.managers.PersonDataManager;
 
 @RestController
-public class PersonDataService {
+public class ServiceProcessor {
 
     private PersonDataManager personDataManager;
 
     @Autowired
-    public PersonDataService(PersonDataManager personDataManager) {
+    public ServiceProcessor(PersonDataManager personDataManager) {
         this.personDataManager = personDataManager;
     }
 
