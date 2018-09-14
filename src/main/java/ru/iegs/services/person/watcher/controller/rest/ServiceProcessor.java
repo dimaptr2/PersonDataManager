@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.iegs.services.person.watcher.controller.managers.PersonDataManager;
 
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
@@ -27,11 +28,15 @@ public class ServiceProcessor {
             @RequestParam(name = "middle-name", defaultValue = "") String middleName) {
 
         StringBuilder answer = new StringBuilder(0);
-        if (firstName.isEmpty()) {
 
+        if ((firstName == null || firstName.isEmpty())
+        && (lastName == null || lastName.isEmpty())) {
+
+        } else {
+            answer.append("{\"Empty\": \"Не заданы обязательные параметры\"}");
         }
 
-        return answer.toString();
+        return String.format(TEMPLATE_TEXT, answer.toString());
     }
 
 }

@@ -1,9 +1,6 @@
 package ru.iegs.services.person.watcher.model.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,6 +9,7 @@ import java.util.Objects;
 public class Person implements Serializable {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     @Column(name = "first_name", length = 50, nullable = false)
     private String firstName;
