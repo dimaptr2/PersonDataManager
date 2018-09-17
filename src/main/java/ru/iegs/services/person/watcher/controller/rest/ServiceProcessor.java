@@ -43,7 +43,7 @@ public class ServiceProcessor {
     }
 
     @RequestMapping("/person/all")
-    public List<Person> readAllEntities() {
+    public List<Person> readPersons() {
         return personDataManager.readAllPersons();
     }
 
