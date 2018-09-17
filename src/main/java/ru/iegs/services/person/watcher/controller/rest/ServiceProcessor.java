@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.iegs.services.person.watcher.controller.managers.PersonDataManager;
+import ru.iegs.services.person.watcher.model.entity.Person;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -32,12 +34,19 @@ public class ServiceProcessor {
 
         if ((firstName == null || firstName.isEmpty())
         && (lastName == null || lastName.isEmpty())) {
-
-        } else {
             answer.append("{\"Empty\": \"Не заданы обязательные параметры\"}");
+        } else {
+            Person person = new Person(firstName, lastName, middleName);
+            personDataManager.savePerson(person);
         }
 
         return String.format(TEMPLATE_TEXT, answer.toString());
     }
+
+    @RequestMapping("/person/all")
+    public List<Person> readAllEntities() {
+        return personDataManager.readAllPersons();
+    }
+
 
 }

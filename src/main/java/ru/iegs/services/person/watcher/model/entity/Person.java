@@ -21,8 +21,7 @@ public class Person implements Serializable {
     public Person() {
     }
 
-    public Person(int id, String firstName, String lastName, String middleName) {
-        this.id = id;
+    public Person(String firstName, String lastName, String middleName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.middleName = middleName;
