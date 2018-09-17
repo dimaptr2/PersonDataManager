@@ -16,7 +16,6 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ServiceProcessor {
 
     private static final String TEMPLATE_TEXT = "%s";
-    private final AtomicLong counter = new AtomicLong();
     private PersonDataManager personDataManager;
 
     @Autowired
