@@ -9,8 +9,6 @@ import ru.iegs.services.person.watcher.controller.managers.PersonDataManager;
 import ru.iegs.services.person.watcher.model.entity.Person;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 public class ServiceProcessor {
