@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="top-header" class="h1">
-<h1>Книга регистрации посетителей</h1>
+<h1>Книга регистрации посетителей ${current-date}</h1>
 </div>
 <div id="parameters">
 
