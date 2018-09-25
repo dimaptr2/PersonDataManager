@@ -40,6 +40,9 @@ dependencies {
     // JPA and the database server
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.h2database:h2")
+    // Apache Freemarker templater
+    compile("org.springframework.boot:spring-boot-starter-freemarker")
+    // test
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
