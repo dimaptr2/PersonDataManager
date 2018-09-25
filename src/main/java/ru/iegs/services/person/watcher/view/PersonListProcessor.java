@@ -21,7 +21,7 @@ public class PersonListProcessor {
     @GetMapping("/")
     public String getIndexPage(Model model) {
         model.addAttribute(
-                "current-date",
+                "currentDate",
                 dateAndTimeFormatter.convertIsoDateToRussianFormattedString(LocalDate.now())
         );
         return "index";
