@@ -32,7 +32,8 @@ configurations {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-data-rest")
+    // General Web Context
+    compile("org.springframework.boot:spring-boot-starter-web")
     // Use Undertow asynchronous server reactor and servlet container
     compile("org.springframework.boot:spring-boot-starter-undertow")
     // For JPA compatibility
