@@ -14,7 +14,9 @@
 <h1 class="h1">Книга регистрации посетителей ${currentDate}</h1>
 </div>
 <div id="parameters">
+<form class="form-control">
 
+</form>
 </div>
 </body>
 </html>
